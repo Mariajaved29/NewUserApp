@@ -1,4 +1,13 @@
 import React from 'react';
+import styled from 'styled-components';
+
+
+const InputStyle = styled.input`
+border: none;
+outline: none;
+border-bottom: 1px solid #555;
+margin: 0 5px;
+`
 
 
 const Register = () => {
@@ -9,11 +18,11 @@ const Register = () => {
 
     return(
      <>
-    <input type="text" value={name} onChange={(e) => {  setName(e.target.value) }} />
+    Name:<InputStyle type="text" value={name} onChange={(e) => {  setName(e.target.value) }} placeholder="Enter your name"/>
     <br/>
-    <input type="email" value={name} onChange={(e) => { setName(e.target.value) }} />
+    Email:<InputStyle type="email" value={name} onChange={(e) => { setName(e.target.value) }} placeholder="Enter your email"/>
     <br/>
-    <input type="password" value={name} onChange={(e) => {setName(e.target.value) }}/>
+    Pass: <InputStyle type="password" value={name} onChange={(e) => {setName(e.target.value) }} placeholder="Enter your password"/>
     </>
     )
 }

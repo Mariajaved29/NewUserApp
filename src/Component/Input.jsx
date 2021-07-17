@@ -1,12 +1,12 @@
 import React from 'react';
 
+
+
 function Input(props) {
     return (
-        <div className='inputstyle'>
-            <input 
+        <input
             {...props} 
-            type={props.type || "text"}/>
-        </div>
+            type={props.type || "text"} />
     )
 }
 
