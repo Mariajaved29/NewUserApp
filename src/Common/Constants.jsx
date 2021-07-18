@@ -1,0 +1,1 @@
+export const reOnlyAlpha = /^[a-z]*$/i;

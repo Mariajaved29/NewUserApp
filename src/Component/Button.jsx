@@ -1,12 +1,37 @@
-import React from 'react';
 import styled from 'styled-components';
 
+
+function Button(title,variant,...props) {
+    return (
+        <ButtonStyled
+        {...props}
+        variant={variant}
+  
+           style={{
+               ...props.style,
+           } }>
+           {title}
+          
+           </ButtonStyled>
+    )
+}
+
+
 const ButtonStyled = styled.button`
-    background-color: #62686e;
+    ${({variant, disabled}) => {
+        const txtColor = disabled ? "#aaa" :variant === "s" ? green : white;
+        const txtColor = disabled ? "#aaa" :variant === "s" ? white : green;
+        eturn `
+        border-color: ${txtColor};
+        background-color: ${bgColor};
+        color: ${txtColor};
+    `;
+    }}
+    background-color: #505358;
     box-shadow: 0 3px 0 0 darken($button, 10%);
     border-radius: 10px;
     border: none;
-    color: white;
+    color: ${txtColor};
     cursor: pointer;
     display: block;
     font-size: 2em;
@@ -20,14 +45,9 @@ const ButtonStyled = styled.button`
         background-color:#384047;
         text-shadow:0 1px 3px darken($button, 30%);
     }
+    &:active {
+        background-color:#384047
+    }
 `
-
-function Button() {
-    return (
-        
-            <ButtonStyled>Signup</ButtonStyled>
-   
-    )
-}
 
 export default Button

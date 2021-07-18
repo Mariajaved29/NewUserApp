@@ -7,7 +7,7 @@ const AuthProvider = (props) => {
     const [email, setEmail] = React.useState("");
     const [password, setPassword] = React.useState("");
     // const [registerUser, setregisterUser] = React.useState("");
-    // const {createUser} = UseAuthContainer;
+    const {createUser} = UseAuthContainer;
 
     const providerValues = {
         name,
