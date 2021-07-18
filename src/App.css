@@ -1,13 +1,16 @@
 .App {
   text-align: center;
+  /* background-color: #b5b6b8; */
 }
-/* input {
-  border: none;
-outline: none;
-border-bottom: 1px solid #555;
-margin: 0 5px;
-} */
-
+.ki {
+ background-color: #282c34;
+ color:white;
+ font-weight: bold;
+ font-size: 30px;
+ text-align: center;
+ display: inline-block;
+ 
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
